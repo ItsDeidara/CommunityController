@@ -213,10 +213,10 @@ def use_button(name: str):
         controller.push_button(BUTTON_RCLICK)
     # start and select
     elif name in ["START", "SELECT"]:
-        if name == "STARTDISABLEDSE7ENSINS":
+        if name == "STARTISDISABLEDINAVERYFANCYWAY":
            increment_button_count("START")
            controller.push_button(BUTTON_PLUS)
-        if name == "SELECTDISABLEDSE7ENSINS":
+        if name == "SELECTWASNEVERENABLED":
             increment_button_count("SELECT")
             controller.push_button(BUTTON_MINUS)
     elif name in ["UP", "DOWN", "LEFT", "RIGHT"]:  # D-Pad
