@@ -351,11 +351,11 @@ def use_button(name: str):
     elif name == "HOLD_LB":
         controller.hold_buttons(BUTTON_L)
         sleep(1.0)
-        controller.release_buttons(BUTTON_ZL)
+        controller.release_buttons(BUTTON_L)
     elif name == "HOLD_RB":
         controller.hold_buttons(BUTTON_R)
         sleep(1.0)
-        controller.release_buttons(BUTTON_ZR)
+        controller.release_buttons(BUTTON_R)
     elif name == "HOLD_ZL":
         controller.hold_buttons(BUTTON_ZL)
         sleep(1.0)
