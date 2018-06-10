@@ -373,7 +373,7 @@ def use_button(name: str):
         sleep(1.0)
         controller.release_buttons(BUTTON_B)
     elif name == "HOLD_X":
-        controller.hold_buttons(BUTTON_A)
+        controller.hold_buttons(BUTTON_X)
         sleep(1.0)
         controller.release_buttons(BUTTON_X)
     elif name == "HOLD_Y":
