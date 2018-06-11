@@ -243,11 +243,6 @@ def use_button(name: str):
             controller.move_backward(GAME_MODE)
             sleep(0.5)
             controller.release_left_stick()
-        elif name == "MOVE_DOWN":
-            increment_button_count("LY MAX")
-            controller.move_backward(GAME_MODE)
-            sleep(0.5)
-            controller.release_left_stick()
         elif name == "MOVE_LEFT":
             increment_button_count("LX MIN")
             controller.move_left()
@@ -326,10 +321,10 @@ def use_button(name: str):
         sleep(0.3)
         controller.release_left_stick()
     elif name == "ADJUST_DOWN":
-        increment_button_count("LY MAX")
-        controller.move_backward(GAME_MODE)
+        increment_button_count("DOWN")
+        controller.hold_dpad(DPAD_DOWN)
         sleep(0.3)
-        controller.release_left_stick()
+        controller.release_dpad()
     elif name == "HOLD_LEFT":
         controller.hold_dpad(DPAD_LEFT)
         sleep(1.0)
@@ -341,7 +336,7 @@ def use_button(name: str):
         controller.release_left_stick()
     elif name == "HOLD_RIGHT":
         controller.hold_dpad(DPAD_RIGHT)
-        sleep(1.5)
+        sleep(1.0)
         controller.release_dpad()
     elif name == "ADJUST_RIGHT":
         increment_button_count("LX MAX")
@@ -459,14 +454,16 @@ def use_button(name: str):
         controller.hold_dpad(DPAD_UP)
         sleep(1.0)
         controller.release_dpad()
-    elif name == "LOCK_ZL": # HOLD_ZL already assigned
+    elif name == "KEEP_HOLD_ZL":
         controller.hold_buttons(BUTTON_ZL)
-        sleep(1.0)
         command_executed = True
     elif name == "RELEASE_ZL":
         controller.release_buttons(BUTTON_ZL)
-        sleep(1.0)
         command_executed = True
+    elif name == "MOVE_DOWN":
+        controller.hold_dpad(DPAD_DOWN)
+        sleep(1.0)
+        controller.release_dpad()
     elif name == "CONNECT":  #connect the controller to the console
         controller.connect()
     else:
