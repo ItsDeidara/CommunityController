@@ -459,7 +459,7 @@ def use_button(name: str):
         controller.hold_dpad(DPAD_UP)
         sleep(1.0)
         controller.release_dpad()
-    elif name == "HOLD_ZL":
+    elif name == "LOCK_ZL": # HOLD_ZL already assigned
         controller.hold_buttons(BUTTON_ZL)
         sleep(1.0)
         command_executed = True
