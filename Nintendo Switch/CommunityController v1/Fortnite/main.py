@@ -235,11 +235,6 @@ def execute_command(message: str) -> None:
                 sleep(1.0)
                 controller.release_dpad()
                 command_executed = True
-            elif single == "MOVE_UP":
-                controller.hold_dpad(DPAD_UP)
-                sleep(1.0)
-                controller.release_dpad()
-                command_executed = True
             elif single == "ADJUST_FORWARD":
                 increment_button_count("LY MIN")
                 controller.move_forward(GAME_MODE)
@@ -302,6 +297,16 @@ def execute_command(message: str) -> None:
                 increment_button_count("CAPTURE")
                 controller.push_button(BUTTON_CAPTURE)
                 command_executed = True
+            elif single == "MOVE_UP":
+                increment_button_count("LY MIN")
+                controller.move_forward(GAME_MODE)
+                sleep(1.0)
+                controller.release_left_stick()
+            elif single == "MOVE_DOWN":
+                    increment_button_count("LY MAX")
+                    controller.move_backward(GAME_MODE)
+                    sleep(1.0)
+                    controller.release_left_stick()
             elif single == "CONNECT":  #connect the controller to the console
                 controller.connect()
                 command_executed = True
