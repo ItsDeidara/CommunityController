@@ -182,22 +182,22 @@ def execute_command(message: str) -> None:
                 if single == "LOOK_UP":
                     increment_button_count("RY MIN")
                     controller.look_up()
-                    sleep(0.5)
+                    sleep(0.3)
                     controller.release_right_stick()
                 elif single == "LOOK_DOWN":
                     increment_button_count("RY MAX")
                     controller.look_down()
-                    sleep(0.5)
+                    sleep(0.3)
                     controller.release_right_stick()
                 elif single == "LOOK_LEFT":
                     increment_button_count("RX MIN")
                     controller.look_left()
-                    sleep(0.5)
+                    sleep(0.3)
                     controller.release_right_stick()
                 elif single == "LOOK_RIGHT":
                     increment_button_count("RX MAX")
                     controller.look_right()
-                    sleep(0.5)
+                    sleep(0.3)
                     controller.release_right_stick()
                 command_executed = True
             #elif single == "SCREENSHOT":  #capture button
