@@ -28,7 +28,7 @@ DATABASE_FILE = "data.db"
 GAME_MODE = MODE_BACK_VIEW
 
 #button shortcuts
-JUMP_BUTTON = BUTTON_A
+JUMP_BUTTON = BUTTON_X
 
 #last command timestamp
 LAST_COMMAND = None
