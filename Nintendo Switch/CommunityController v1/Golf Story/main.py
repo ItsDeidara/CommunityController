@@ -168,22 +168,22 @@ def execute_command(message: str) -> None:
                 if single == "MOVE_FORWARD":
                     increment_button_count("LY MIN")
                     controller.move_forward(GAME_MODE)
-                    sleep(0.2)
+                    sleep(0.4)
                     controller.release_left_stick()
                 elif single == "MOVE_BACK":
                     increment_button_count("LY MAX")
                     controller.move_backward(GAME_MODE)
-                    sleep(0.2)
+                    sleep(0.43)
                     controller.release_left_stick()
                 elif single == "MOVE_LEFT":
                     increment_button_count("LX MIN")
                     controller.move_left()
-                    sleep(0.2)
+                    sleep(0.4)
                     controller.release_left_stick()
                 elif single == "MOVE_RIGHT":
                     increment_button_count("LX MAX")
                     controller.move_right()
-                    sleep(0.2)
+                    sleep(0.4)
                     controller.release_left_stick()
                 command_executed = True
             elif single in ["LOOK_UP", "LOOK_DOWN", "LOOK_LEFT", "LOOK_RIGHT"]:  # right stick
@@ -231,12 +231,12 @@ def execute_command(message: str) -> None:
             elif single == "ADJUST_BACKWARD":
                 increment_button_count("LY MAX")
                 controller.move_backward(GAME_MODE)
-                sleep(0.1)
+                sleep(0.2)
                 controller.release_left_stick()
             elif single == "ADJUST_BACK":
                 increment_button_count("LY MAX")
                 controller.move_backward(GAME_MODE)
-                sleep(0.1)
+                sleep(0.2)
                 controller.release_left_stick()
             elif single == "HOLD_UP":
                 controller.hold_dpad(DPAD_UP)
@@ -246,7 +246,7 @@ def execute_command(message: str) -> None:
             elif single == "ADJUST_FORWARD":
                 increment_button_count("LY MIN")
                 controller.move_forward(GAME_MODE)
-                sleep(0.1)
+                sleep(0.2)
                 controller.release_left_stick()
                 command_executed = True
             elif single == "HOLD_LEFT":
@@ -257,7 +257,7 @@ def execute_command(message: str) -> None:
             elif single == "ADJUST_LEFT":
                 increment_button_count("LX MIN")
                 controller.move_left()
-                sleep(0.1)
+                sleep(0.2)
                 controller.release_left_stick()
             elif single == "MOVE_LEFT":
                 controller.hold_dpad(DPAD_LEFT)
@@ -272,7 +272,7 @@ def execute_command(message: str) -> None:
             elif single == "ADJUST_RIGHT":
                 increment_button_count("LX MAX")
                 controller.move_right()
-                sleep(0.1)
+                sleep(0.2)
                 controller.release_left_stick()
                 command_executed = True
             elif single == "MOVE_RIGHT":
