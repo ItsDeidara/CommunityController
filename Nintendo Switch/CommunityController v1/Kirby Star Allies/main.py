@@ -412,6 +412,177 @@ def execute_command(message: str) -> None:
             elif single == "CONNECT":  #connect the controller to the console
                 controller.connect()
                 command_executed = True
+            # Custom commands
+            if single[0:7] == "CUSTOM(" and single.find(")") > 7:  # single == "CUSTOM(smthg)"
+                tmpr = single[7:single.find(")")].strip().replace("_", " ")  # tmpr == "smthg"
+
+                combine = []
+
+                if tmpr[0:1] == "[" and tmpr.find("]") > 0:  # tmpr == "a[b, ...]c"
+                    combine = tmpr[tmpr.find("[") + 1:tmpr.find("]")].split(";")  # combine == ["b", "..."]
+
+                    tmpr = tmpr[tmpr.find("]") + 1:]  # tmpr == "c"
+                elif tmpr.find(";") > -1:  # tmpr == "x,y"
+                    combine = [tmpr[0:tmpr.find(";")]]  # combine == ["x"]
+                else:  # tmpr = "x"
+                    combine = [tmpr]  # combine == ["x"]
+
+                    tmpr = ""
+
+                tmpr = tmpr[tmpr.find(";") + 1:].strip()
+
+                # At this point...
+                # combine is an array of commands
+                # tmpr is a string supposedly containing the duration of the custom command
+
+                duration = 0.01
+                try:
+                    duration = float(tmpr)
+
+                    if duration > 0 and duration <= 1:  # the duration has to be between 0 and 1 second
+                        duration = duration
+                    else:
+                        duration = 0.02
+
+                except:
+                    0
+
+                cmd = []  # array of the commands to execute, again...
+
+                for i in combine:
+                    i = i.strip().replace(" ", "_")
+
+                    if i in ["PLUS", "START"]:
+                        increment_button_count("START")
+                        cmd.append(BUTTON_PLUS)
+                    elif i in ["MINUS", "SELECT"]:
+                        increment_button_count("SELECT")
+                        cmd.append(BUTTON_MINUS)
+
+                    elif i == "A":
+                        increment_button_count("A")
+                        cmd.append(BUTTON_A)
+                    elif i == "B":
+                        increment_button_count("B")
+                        cmd.append(BUTTON_B)
+                    elif i == "X":
+                        increment_button_count("X")
+                        cmd.append(BUTTON_X)
+                    elif i == "Y":
+                        increment_button_count("Y")
+                        cmd.append(BUTTON_Y)
+
+                    elif i in ["UP", "DUP", "D_UP"]:
+                        increment_button_count("UP")
+                        cmd.append(DPAD_UP)
+                    elif i in ["DOWN", "DDOWN", "D_DOWN"]:
+                        increment_button_count("DOWN")
+                        cmd.append(DPAD_DOWN)
+                    elif i in ["LEFT", "DLEFT", "D_LEFT"]:
+                        increment_button_count("LEFT")
+                        cmd.append(DPAD_LEFT)
+                    elif i in ["RIGHT", "DRIGHT", "D_RIGHT"]:
+                        increment_button_count("RIGHT")
+                        cmd.append(DPAD_RIGHT)
+
+                    elif i in ["L", "LB"]:
+                        increment_button_count("L")
+                        cmd.append(BUTTON_L)
+                    elif i in ["R", "RB"]:
+                        increment_button_count("R")
+                        cmd.append(BUTTON_R)
+                    elif i in ["ZL", "LT"]:
+                        increment_button_count("ZL")
+                        cmd.append(BUTTON_ZL)
+                    elif i in ["ZR", "RT"]:
+                        increment_button_count("ZR")
+                        cmd.append(BUTTON_ZR)
+
+                    elif i in ["LCLICK", "L3"]:
+                        increment_button_count("LCLICK")
+                        cmd.append(BUTTON_LCLICK)
+                    elif i in ["RCLICK", "R3"]:
+                        increment_button_count("RCLICK")
+                        cmd.append(BUTTON_RCLICK)
+
+                    elif i in ["LUP", "L_UP"]:
+                        increment_button_count("LY MIN")
+                        cmd.append("L_UP")
+                    elif i in ["LDOWN", "L_DOWN"]:
+                        increment_button_count("LY MAX")
+                        cmd.append("L_DOWN")
+                    elif i in ["LLEFT", "L_LEFT"]:
+                        increment_button_count("LX MIN")
+                        cmd.append("L_LEFT")
+                    elif i in ["LRIGHT", "L_RIGHT"]:
+                        increment_button_count("LX MAX")
+                        cmd.append("L_RIGHT")
+
+                    elif i in ["RUP", "R_UP"]:
+                        increment_button_count("RY MIN")
+                        cmd.append("R_UP")
+                    elif i in ["RDOWN", "R_DOWN"]:
+                        increment_button_count("RY MAX")
+                        cmd.append("R_DOWN")
+                    elif i in ["RLEFT", "R_LEFT"]:
+                        increment_button_count("RX MIN")
+                        cmd.append("R_LEFT")
+                    elif i in ["RRIGHT", "R_RIGHT"]:
+                        increment_button_count("RX MAX")
+                        cmd.append("R_RIGHT")
+
+                    elif i == "WAIT":
+                        cmd.append("WAIT")
+
+                for i in cmd:  # buttons to hold
+                    if i in [BUTTON_PLUS, BUTTON_MINUS, BUTTON_A, BUTTON_B, BUTTON_X, BUTTON_Y, BUTTON_L, BUTTON_R,
+                             BUTTON_ZL, BUTTON_ZR, BUTTON_LCLICK, BUTTON_RCLICK]:
+                        controller.hold_buttons(i)
+                        command_executed = True
+                    elif i in [DPAD_UP, DPAD_DOWN, DPAD_LEFT, DPAD_RIGHT]:
+                        controller.hold_dpad(i)
+                        command_executed = True
+                    elif i == "L_UP":
+                        controller.move_forward(GAME_MODE)
+                        command_executed = True
+                    elif i == "L_DOWN":
+                        controller.move_backward(GAME_MODE)
+                        command_executed = True
+                    elif i == "L_LEFT":
+                        controller.move_left()
+                        command_executed = True
+                    elif i == "L_RIGHT":
+                        controller.move_right()
+                        command_executed = True
+                    elif i == "R_UP":
+                        controller.look_up()
+                        command_executed = True
+                    elif i == "R_DOWN":
+                        controller.look_down()
+                        command_executed = True
+                    elif i == "R_LEFT":
+                        controller.look_left()
+                        command_executed = True
+                    elif i == "R_RIGHT":
+                        controller.look_right()
+                        command_executed = True
+                    elif i == "WAIT":
+                        command_executed = True
+
+                if command_executed:  # sleep if any command has been executed
+                    sleep(duration)
+
+                for i in cmd:  # release the buttons
+                    if i in [BUTTON_PLUS, BUTTON_MINUS, BUTTON_A, BUTTON_B, BUTTON_X, BUTTON_Y, BUTTON_L, BUTTON_R,
+                             BUTTON_ZL, BUTTON_ZR, BUTTON_LCLICK, BUTTON_RCLICK]:
+                        controller.release_buttons(i)
+                    elif i in [DPAD_UP, DPAD_DOWN, DPAD_LEFT, DPAD_RIGHT]:
+                        controller.release_dpad()
+                    elif i in ["L_UP", "L_DOWN", "L_LEFT", "L_RIGHT"]:
+                        controller.release_left_stick()
+                    elif i in ["R_UP", "R_DOWN", "R_LEFT", "R_RIGHT"]:
+                        controller.release_right_stick()
+
     if command_executed:
         global LAST_COMMAND
         LAST_COMMAND = timestamp()
