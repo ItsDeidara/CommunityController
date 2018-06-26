@@ -21,7 +21,7 @@ Look Left / right / up / down
 
 ### Custom commands
 
-Thanks to the work of one of our community members, we now support the use of custom commands in chat, that should allow you to circumvent any/all situations that the main controls make difficult!
+Thanks to the work of one of our community members(fazzfadf), we now support the use of custom commands in chat, that should allow you to circumvent any/all situations that the main controls make difficult!
 
 
 
