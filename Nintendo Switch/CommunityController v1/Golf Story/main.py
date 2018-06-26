@@ -314,13 +314,13 @@ def execute_command(message: str) -> None:
             elif single == "KEEP_HOLD_ZL":
                 controller.hold_buttons(BUTTON_ZL)
                 command_executed = True
-            elif singe == "RELEASE_ZL":
+            elif single == "RELEASE_ZL":
                 controller.release_buttons(BUTTON_ZL)
                 command_executed = True
             elif single == "KEEP_HOLD_ZR":
                 controller.hold_buttons(BUTTON_ZR)
                 command_executed = True
-            elif singe == "RELEASE_ZR":
+            elif single == "RELEASE_ZR":
                 controller.release_buttons(BUTTON_ZR)
                 command_executed = True
             elif single == "CONNECT":  # connect the controller to the console
