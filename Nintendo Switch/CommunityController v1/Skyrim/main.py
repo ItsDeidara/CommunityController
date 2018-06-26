@@ -135,9 +135,9 @@ def execute_command(message: str) -> None:
                 command_executed = True
             # start and select
             elif single in ["START", "SELECT"]:
-                if single == "START":
-                   increment_button_count("START")
-                   controller.push_button(BUTTON_PLUS)
+                #if single == "START":
+                #   increment_button_count("START")
+                #   controller.push_button(BUTTON_PLUS)
                 if single == "SELECT":
                     increment_button_count("SELECT")
                     controller.push_button(BUTTON_MINUS)
@@ -182,22 +182,22 @@ def execute_command(message: str) -> None:
                 if single == "LOOK_UP":
                     increment_button_count("RY MIN")
                     controller.look_up()
-                    sleep(0.5)
+                    sleep(0.4)
                     controller.release_right_stick()
                 elif single == "LOOK_DOWN":
                     increment_button_count("RY MAX")
                     controller.look_down()
-                    sleep(0.5)
+                    sleep(0.4)
                     controller.release_right_stick()
                 elif single == "LOOK_LEFT":
                     increment_button_count("RX MIN")
                     controller.look_left()
-                    sleep(0.5)
+                    sleep(0.4)
                     controller.release_right_stick()
                 elif single == "LOOK_RIGHT":
                     increment_button_count("RX MAX")
                     controller.look_right()
-                    sleep(0.5)
+                    sleep(0.4)
                     controller.release_right_stick()
                 command_executed = True
             #elif single == "SCREENSHOT":  #capture button
@@ -210,57 +210,11 @@ def execute_command(message: str) -> None:
                 sleep(1.0)
                 controller.release_buttons(JUMP_BUTTON)
                 command_executed = True
-            elif single == "JUMP_FORWARD":
-                controller.move_forward(GAME_MODE)
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_buttons(JUMP_BUTTON)
-                controller.release_left_stick()
-            elif single == "JUMP_UP":
-                controller.move_forward(GAME_MODE)
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_buttons(JUMP_BUTTON)
-                controller.release_left_stick()
-            elif single == "JUMP":
-                controller.move_forward(GAME_MODE)
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_buttons(JUMP_BUTTON)
-                controller.release_left_stick()
-            elif single == "JUMP_BACK":
-                controller.move_backward(GAME_MODE)
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_buttons(JUMP_BUTTON)
-                controller.release_left_stick()
-            elif single == "JUMP_DOWN":
-                controller.move_forward(GAME_MODE)
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_buttons(JUMP_BUTTON)
-                controller.release_left_stick()
-            elif single == "JUMP_LEFT":
-                increment_button_count("LX MIN")
-                controller.move_left()
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_left_stick()
-            elif single == "JUMP_RIGHT":
-                increment_button_count("LX MAX")
-                controller.move_right()
-                controller.hold_buttons(JUMP_BUTTON)
-                sleep(1.0)
-                controller.release_left_stick()
             elif single == "HOLD_DOWN":
                 controller.hold_dpad(DPAD_DOWN)
                 sleep(1.0)
                 controller.release_dpad()
                 command_executed = True
-            elif single == "PRESS_DOWN":
-                controller.hold_dpad(DPAD_DOWN)
-                sleep(0.5)
-                controller.release_dpad()
             elif single == "DOWN":
                 controller.hold_dpad(DPAD_DOWN)
                 sleep(1.0)
@@ -281,10 +235,6 @@ def execute_command(message: str) -> None:
                 sleep(1.0)
                 controller.release_dpad()
                 command_executed = True
-            elif single == "PRESS_UP":
-                controller.hold_dpad(DPAD_UP)
-                sleep(0.5)
-                controller.release_dpad()
             elif single == "ADJUST_FORWARD":
                 increment_button_count("LY MIN")
                 controller.move_forward(GAME_MODE)
@@ -317,10 +267,6 @@ def execute_command(message: str) -> None:
                 sleep(0.3)
                 controller.release_left_stick()
                 command_executed = True
-            elif single == "PRESS_RIGHT":
-                controller.hold_dpad(DPAD_RIGHT)
-                sleep(0.5)
-                controller.release_dpad()
             elif single == "MOVE_RIGHT":
                 controller.hold_dpad(DPAD_RIGHT)
                 sleep(1.0)
@@ -337,7 +283,7 @@ def execute_command(message: str) -> None:
                 controller.release_buttons(BUTTON_B)
                 command_executed = True
             elif single == "HOLD_X":
-                controller.hold_buttons(BUTTON_X)
+                controller.hold_buttons(BUTTON_A)
                 sleep(1.0)
                 controller.release_buttons(BUTTON_X)
                 command_executed = True
@@ -356,191 +302,61 @@ def execute_command(message: str) -> None:
                 controller.move_forward(GAME_MODE)
                 sleep(1.0)
                 controller.release_left_stick()
-            elif single == "CROUCH":
-                increment_button_count("LCLICK")
-                controller.push_button(BUTTON_LCLICK)
-            elif single == "STAND":
-                increment_button_count("LCLICK")
-                controller.push_button(BUTTON_LCLICK)
-            elif single == "BLOCK":
-                increment_button_count("ZL")
-                controller.hold_buttons(BUTTON_ZL)
-                sleep(1.0)
-                controller.hold_buttons(BUTTON_ZL)
-            elif single == "SHIELD":
-                increment_button_count("ZL")
-                controller.hold_buttons(BUTTON_ZL)
-                sleep(1.0)
-                controller.hold_buttons(BUTTON_ZL)
-            elif single == "RUNE":
-                increment_button_count("L")
-                controller.hold_buttons(BUTTON_L)
-                sleep(1.0)
-                controller.release_buttons(BUTTON_L)
-            elif single == "USE_RUNE":
-                increment_button_count("L")
-                controller.hold_buttons(BUTTON_L)
-                sleep(1.0)
-                controller.release_buttons(BUTTON_L)
-            elif single == "DRAW_ARROW":
-                increment_button_count("ZR")
-                controller.hold_buttons(BUTTON_ZR)
-                sleep(1.0)
-                controller.hold_buttons(BUTTON_ZR)
-            elif single == "SHOOT_ARROW":
-                increment_button_count("ZR")
-                controller.hold_buttons(BUTTON_ZR)
-                sleep(1.0)
-                controller.hold_buttons(BUTTON_ZR)
-            elif single == "NEXT_WEAPON":
-                print("NEXT_WEAPON")
-                controller.hold_dpad(DPAD_RIGHT)
-                sleep(1.0)
-                controller.push_button(BUTTON_R)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "NEXT_ARROW":
-                controller.hold_dpad(DPAD_LEFT)
-                sleep(1.0)
-                controller.push_button(BUTTON_R)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "NEXT_SHIELD":
-                controller.hold_dpad(DPAD_LEFT)
-                sleep(1.0)
-                controller.push_button(BUTTON_R)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "NEXT_RUNE":
-                controller.hold_dpad(DPAD_UP)
-                sleep(1.0)
-                controller.push_button(BUTTON_R)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "PREVIOUS_WEAPON":
-                controller.hold_dpad(DPAD_RIGHT)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "LAST_WEAPON":
-                controller.hold_dpad(DPAD_RIGHT)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "PREVIOUS_ARROW":
-                controller.hold_dpad(DPAD_LEFT)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "LAST_ARROW":
-                controller.hold_dpad(DPAD_LEFT)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "PREVIOUS_SHIELD":
-                controller.hold_dpad(DPAD_LEFT)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "LAST_SHIELD":
-                controller.hold_dpad(DPAD_LEFT)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "PREVIOUS_RUNE":
-                controller.hold_dpad(DPAD_UP)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "LAST_RUNE":
-                controller.hold_dpad(DPAD_UP)
-                sleep(1.0)
-                controller.push_button(BUTTON_L)
-                sleep(0.4)
-                controller.release_dpad()
-            elif single == "ATTACK":
-                controller.push_button(BUTTON_Y)
-            elif single in "CLIMB":
-                increment_button_count("X")
-                controller.push_button(BUTTON_X)
-            elif single in "FOCUS":
-                increment_button_count("ZL")
-                controller.push_button(BUTTON_ZL)
-            elif single in "SHEIKAH_SLATE":
-                increment_button_count("SELECT")
-                controller.push_button(BUTTON_MINUS)
             elif single == "MOVE_DOWN":
                     increment_button_count("LY MAX")
                     controller.move_backward(GAME_MODE)
                     sleep(1.0)
                     controller.release_left_stick()
-            elif single == "HOP":
-                sleep(0.1)
-                increment_button_count("X")
-                controller.push_button(JUMP_BUTTON)
-                sleep(0.1)
-            elif single in ["HOP_FORWARD", "HOP_UP"]:
-                increment_button_count("LY MIN")
-                controller.move_forward()
-                sleep(0.1)
-                increment_button_count("X")
-                controller.push_button(JUMP_BUTTON)
-                sleep(0.1)
-                controller.release_left_stick()
-            elif single in ["HOP_BACK", "HOP_DOWN"]:
-                increment_button_count("LY MAX")
-                controller.move_backward()
-                sleep(0.1)
-                increment_button_count("X")
-                controller.push_button(JUMP_BUTTON)
-                sleep(0.1)
-                controller.release_left_stick()
-            elif single == "HOP_LEFT":
-                increment_button_count("LX MIN")
-                controller.move_left()
-                sleep(0.1)
-                increment_button_count("X")
-                controller.push_button(JUMP_BUTTON)
-                sleep(0.1)
-                controller.release_left_stick()
-            elif single == "HOP_RIGHT":
-                increment_button_count("LX MAX")
-                controller.move_right()
-                sleep(0.1)
-                increment_button_count("X")
-                controller.push_button(JUMP_BUTTON)
-                sleep(0.1)
-                controller.release_left_stick()
+            elif single == "CONNECT":  #connect the controller to the console
+                controller.connect()
+                command_executed = True
+            elif single in "SNEAK":
+                increment_button_count("RCLICK")
+                controller.push_button(BUTTON_RCLICK)
+                command_executed = True
+            elif single in "SHOUT":
+                increment_button_count(BUTTON_R)
+                controller.push_button(BUTTON_R)
+                command_executed = True
+            elif single in "WAIT":
+                increment_button_count(SELECT)
+                controller.push_button(BUTTON_MINUS)
+                command_executed = True
+            elif single in "ACTIVATE":
+                controller.push_button(BUTTON_A)
+                command_executed = True
+            elif single in "CHARACTER_MENU":
+                controller.push_button(BUTTON_B)
+                command_executed = True
+            elif single in "MENU":
+                controller.push_button(BUTTON_B)
+                command_executed = True
+            elif single in "READY":
+                controller.push_button(BUTTON_Y)
+                command_executed = True
+            elif single in "REAR":
+                controller.push_button(BUTTON_X)
+                command_executed = True
             elif single == "GLANCE_UP":
                 increment_button_count("RY MIN")
                 controller.look_up()
-                sleep(0.125)
+                sleep(0.2)
                 controller.release_right_stick()
             elif single == "GLANCE_DOWN":
                 increment_button_count("RY MAX")
                 controller.look_down()
-                sleep(0.125)
+                sleep(0.2)
                 controller.release_right_stick()
             elif single == "GLANCE_LEFT":
                 increment_button_count("RX MIN")
                 controller.look_left()
-                sleep(0.125)
+                sleep(0.2)
                 controller.release_right_stick()
             elif single == "GLANCE_RIGHT":
                 increment_button_count("RX MAX")
                 controller.look_right()
-                sleep(0.125)
+                sleep(0.2)
                 controller.release_right_stick()
-            elif single == "CONNECT":  #connect the controller to the console
-                controller.connect()
-                command_executed = True
     if command_executed:
         global LAST_COMMAND
         LAST_COMMAND = timestamp()

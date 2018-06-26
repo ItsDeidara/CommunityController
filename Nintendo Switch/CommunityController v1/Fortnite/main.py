@@ -307,6 +307,27 @@ def execute_command(message: str) -> None:
                     controller.move_backward(GAME_MODE)
                     sleep(1.0)
                     controller.release_left_stick()
+            elif single == "GLANCE_UP":
+                increment_button_count("RY MIN")
+                controller.look_up()
+                sleep(0.1)
+                controller.release_right_stick()
+            elif single == "GLANCE_DOWN":
+                increment_button_count("RY MAX")
+                controller.look_down()
+                sleep(0.1)
+                controller.release_right_stick()
+            elif single == "GLANCE_LEFT":
+                increment_button_count("RX MIN")
+                controller.look_left()
+                sleep(0.1)
+                controller.release_right_stick()
+            elif single == "GLANCE_RIGHT":
+                increment_button_count("RX MAX")
+                controller.look_right()
+                sleep(0.1)
+                controller.release_right_stick()
+        if command_executed:
             elif single == "CONNECT":  #connect the controller to the console
                 controller.connect()
                 command_executed = True
