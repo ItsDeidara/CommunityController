@@ -489,14 +489,14 @@ def use_button(name: str):
         # combine is an array of commands
         # tmpr is a string supposedly containing the duration of the custom command
 
-        duration = 0.01
+        duration = 0.02
         try:
             duration = float(tmpr)
 
             if duration > 0 and duration <= 1:  # the duration has to be between 0 and 1 second
                 duration = duration
             else:
-                duration = 0.01
+                duration = 0.02
 
         except:
             0

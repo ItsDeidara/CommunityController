@@ -356,7 +356,7 @@ if single[0:7] == "CUSTOM(" and single.find(")") > 7:  # single == "CUSTOM(smthg
     # combine is an array of commands
     # tmpr is a string supposedly containing the duration of the custom command
 
-    duration = 0.01
+    duration = 0.02
     try:
         duration = float(tmpr)
 
