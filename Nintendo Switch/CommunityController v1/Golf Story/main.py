@@ -323,6 +323,9 @@ def execute_command(message: str) -> None:
             elif single == "RELEASE_ZR":
                 controller.release_buttons(BUTTON_ZR)
                 command_executed = True
+            elif single == "RELEASE_ZL":
+                controller.release_buttons(BUTTON_ZL)
+                command_executed = True
             elif single == "CONNECT":  # connect the controller to the console
                 controller.connect()
                 command_executed = True
