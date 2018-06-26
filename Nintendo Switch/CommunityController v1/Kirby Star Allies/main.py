@@ -356,7 +356,7 @@ def execute_command(message: str) -> None:
                 command_executed = True
             elif single == "HOLD_RIGHT":
                 controller.hold_dpad(DPAD_RIGHT)
-                sleep(1.5)
+                sleep(1.0)
                 controller.release_dpad()
                 command_executed = True
             elif single == "ADJUST_RIGHT":

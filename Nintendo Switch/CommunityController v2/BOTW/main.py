@@ -364,7 +364,7 @@ def use_button(name: str):
         controller.release_dpad()
     elif name == "HOLD_RIGHT":
         controller.hold_dpad(DPAD_RIGHT)
-        sleep(1.5)
+        sleep(1.0)
         controller.release_dpad()
     elif name == "ADJUST_RIGHT":
         increment_button_count("LX MAX")

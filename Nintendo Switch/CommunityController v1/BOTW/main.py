@@ -261,11 +261,6 @@ def execute_command(message: str) -> None:
                 controller.hold_dpad(DPAD_DOWN)
                 sleep(0.5)
                 controller.release_dpad()
-            elif single == "DOWN":
-                controller.hold_dpad(DPAD_DOWN)
-                sleep(1.0)
-                controller.release_dpad()
-                command_executed = True
             elif single == "ADJUST_BACKWARD":
                 increment_button_count("LY MAX")
                 controller.move_backward(GAME_MODE)
@@ -308,7 +303,7 @@ def execute_command(message: str) -> None:
                 command_executed = True
             elif single == "HOLD_RIGHT":
                 controller.hold_dpad(DPAD_RIGHT)
-                sleep(1.5)
+                sleep(1.0)
                 controller.release_dpad()
                 command_executed = True
             elif single == "ADJUST_RIGHT":
