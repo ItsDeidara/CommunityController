@@ -67,3 +67,75 @@ dup, ddown, dleft, dright, #dpad
 wait #does nothing for the specified time
 
 ```
+
+# Game Specific Commands
+
+* **Super Mario Odyssey**
+    * Capture (Throws Cappy)
+    * Ground Pound
+    * Crouch
+    * Backflip
+    * Long jump
+    * Swim
+    * Dive
+    * Flick up
+* **Kirby Star Allies**
+    * Attack
+    * BFF
+    * Dash Kick
+    * Drop Ability
+    * Suck
+        * Succ
+    * Swallow
+* **Skyrim**
+    * Activate
+    * Sneak
+    * Shout
+    * Character Menu
+    * Menu
+    * Wait
+    * Rear
+    * Ready
+* **The legend of Zelda: Breath of the wild**
+    * Hop
+        * Hop left
+        * Hop right
+        * Hop down
+        * Hop up
+        * Hop back
+        * Hop backward
+    * Attack
+    * Climb
+    * Focus
+    * Sheikah slate
+    * Previous rune
+    * Last rune
+    * Previous sheild
+    * Last sheild
+    * Previous arrow
+    * Last arrow
+    * Previous weapon
+    * Last weapon
+    * Next rune
+    * Next shield
+    * Next arrow
+    * Next weapon
+    * Shoot arrow
+    * Draw arrow
+    * Use rune
+    * Shield
+    * Block
+    * Crouch
+* **Donkey Kong: Tropical Freeze**
+    * Kong Pow
+        * Pow
+        * KP
+    * Grab
+    * Throw
+    * Pluck
+    * Combine
+    * Dismount
+    * Roll attack
+    * Attack
+    * Corkscrew
+    * Swim
