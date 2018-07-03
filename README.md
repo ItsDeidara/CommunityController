@@ -139,3 +139,8 @@ wait #does nothing for the specified time
     * Attack
     * Corkscrew
     * Swim
+    * Keep Hold ZL (holds ZL forever)
+    * Release ZL   (undos aforementioned hold ZL command)
+* **Splatoon 2**
+    * Keep Hold ZL (holds ZL forever)
+    * Release ZL   (undos aforementioned hold ZL command)
