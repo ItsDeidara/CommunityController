@@ -115,8 +115,8 @@ wait #does nothing for the specified time
     * Sheikah slate
     * Previous rune
     * Last rune
-    * Previous sheild
-    * Last sheild
+    * Previous shield
+    * Last shield
     * Previous arrow
     * Last arrow
     * Previous weapon
