@@ -584,7 +584,7 @@ def execute_command(message: str) -> None:
                 sleep(0.5)
                 controller.release_dpad()
                 command_executed = True
-            elif single == "NEXT_SHIED":
+            elif single == "NEXT_SHIELD":
                 increment_button_count("LEFT")
                 controller.hold_dpad(DPAD_LEFT)
                 sleep(0.5)
