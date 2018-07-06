@@ -97,6 +97,10 @@ wait #does nothing for the specified time
     * Rear
     * Ready
 * **The legend of Zelda: Breath of the wild**
+    * Onward (Allows Link to walk forever until you tell him to stop)
+        * Stop  (Stops link from walking)
+        * Still (stops Link from walking)
+    * Run (Makes Link run)
     * Hop
         * Hop left
         * Hop right
@@ -105,6 +109,7 @@ wait #does nothing for the specified time
         * Hop back
         * Hop backward
     * Attack
+        * Bash (does a shield bash)
     * Climb
     * Focus
     * Sheikah slate
