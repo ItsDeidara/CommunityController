@@ -131,6 +131,7 @@ wait #does nothing for the specified time
     * Shield
     * Block
     * Crouch
+    * Glide
 * **Donkey Kong: Tropical Freeze**
     * Kong Pow
         * Pow
