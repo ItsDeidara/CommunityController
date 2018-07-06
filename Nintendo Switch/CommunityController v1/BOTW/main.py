@@ -803,9 +803,13 @@ def execute_command(message: str) -> None:
                 controller.move_forward(GAME_MODE)
                 sleep(0.05)
                 controller.push_button(BUTTON_X)
+                sleep(0.05)
                 controller.push_button(BUTTON_X)
+                sleep(0.05)
                 controller.push_button(BUTTON_X)
+                sleep(0.05)
                 controller.push_button(BUTTON_X)
+                sleep(0.05)
                 controller.release_left_stick()
                 command_executed = True
             # Custom commands
