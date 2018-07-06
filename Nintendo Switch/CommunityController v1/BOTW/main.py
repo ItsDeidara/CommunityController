@@ -799,7 +799,7 @@ def execute_command(message: str) -> None:
                 controller.release_left_stick()
                 controller.release_buttons(BUTTON_B)
                 command_executed = True
-            elif single == "EXPGLIDE":
+            elif single == "GLIDE":
                 controller.move_forward(GAME_MODE)
                 sleep(0.05)
                 controller.push_button(BUTTON_X)
