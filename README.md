@@ -109,7 +109,7 @@ wait #does nothing for the specified time
         * Hop back
         * Hop backward
     * Attack
-        * Bash (does a shield bash)
+        * Bash (quick attack for when Link is catching his breath)
     * Climb
     * Focus
     * Sheikah slate
