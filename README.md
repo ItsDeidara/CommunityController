@@ -150,3 +150,10 @@ wait #does nothing for the specified time
 * **Splatoon 2**
     * Keep Hold ZL (holds ZL forever)
     * Release ZL   (undos aforementioned hold ZL command)
+* **A Link Between Worlds**
+    * Walk <direction> (Makes link walk in the specified direction until told to stop)
+    * Stand Still (makes link stop walking)
+    * Stop walking (makes link stop walking)
+    * Stop (makes link stop walking)
+    * Still (makes link stop walking)
+    * Spin Attack
