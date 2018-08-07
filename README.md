@@ -151,7 +151,8 @@ wait #does nothing for the specified time
     * Keep Hold ZL (holds ZL forever)
     * Release ZL   (undos aforementioned hold ZL command)
 * **A Link Between Worlds**
-    * Walk <direction> (Makes link walk in the specified direction until told to stop)
+    * Walk Direction (Makes link walk in the specified direction until told to stop)
+    * Look Direction (Makes link turn without moving)
     * Stand Still (makes link stop walking)
     * Stop walking (makes link stop walking)
     * Stop (makes link stop walking)
