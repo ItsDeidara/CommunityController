@@ -158,3 +158,11 @@ wait #does nothing for the specified time
     * Stop (makes link stop walking)
     * Still (makes link stop walking)
     * Spin Attack
+* **Xenoblade Chronicles 2**
+    * Toggle map (toggles teh minimap zoom)
+    * Zoom map (same as above)
+    * target (locks onto the enemy)
+    * engage (locks onto the enemy and also initiates combat)
+    * menu (pauses the game)
+    * system (brings up the system menu to allow for game saving and setting adjustment)
+    * travel (Brings up the skip travel menu which lets you fast travel)
