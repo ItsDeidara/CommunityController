@@ -11,3 +11,7 @@ No catch at all! Unless of course that you count me asking for credit, and a lin
 
 ## Is there a discussion thread or anywhere that I can go for support, or to share my work? 
 Of course there is! You can find a [gbatemp thread for this bot here](https://gbatemp.net/threads/communitycontroller-pro-controller-python-bot.528158/)
+
+## Known bugs
+1. Serial Connection Randomly Closes and will not reopen. A dirty fix is to start the main.py file with a looping shell script like I did in CommunityController
+2. The left thumbstick is not completly centered. This is fine in most cases but it will cause some oddities in some games. Such as not being able to navigate the map in Breath of the Wild, and not allowing you to Warp in Super Mario Odyssey. In some games it may even make the character Drift forward however I have only encountered this in the Nintendo Switch version of Fortnite
