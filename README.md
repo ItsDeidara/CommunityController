@@ -9,6 +9,9 @@ I'm glad you asked! Since this bot only uses a simple Python script(seriously ch
 ## This is great, but what's the catch?
 No catch at all! Unless of course that you count me asking for credit, and a link back to this repo within your Project if you use it as one. 
 
+## Is there a discussion thread or anywhere that I can go for support, or to share my work? 
+Of course there is! You can find a [gbatemp thread for this bot here](https://gbatemp.net/threads/communitycontroller-pro-controller-python-bot.528158/)
+
 
 
 
