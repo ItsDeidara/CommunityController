@@ -1,6 +1,24 @@
 # What even is this?
 
-Glad you asked! Community Controller aims to bring a 24/7 interactive stream to your favorite platforms! So kick back, relax, and take control! Starting with Twitch Plays Nintendo Switch!
+This is the source code that I used for CommunityController or as it was better known for. Twitch Plays Nintendo Switch or even Twitch plays Super Mario Odyssey! This houses all of the files that I used to make it possible so that both our Community can improve the code so that the stream can become bigger and better, and also so that others can innovate on this project and create their own bots!
+
+## What can I do with this?
+
+I'm glad you asked! Since this bot only uses a simple Python script(seriously check it out, a child could learn it!) You can do a pletora of things, like making a rudimentary TAS bot for your favorite game, or even creating a bot to duplicate & sell items so that you can have virtually an infiite amount of gold!
+
+## This is great, but what's the catch?
+No catch at all! Unless of course that you count me asking for credit, and a link back to this repo within your Project if you use it as one. 
+
+
+
+
+
+
+
+
+### Below this line is the original Readme file, as this Github was originally for Documenting the controls so that new players could easily learn how to play their favorite games on stream!
+
+---
 
 ## Controls
 
