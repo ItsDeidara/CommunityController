@@ -162,3 +162,12 @@ wait #does nothing for the specified time
     * menu (pauses the game)
     * system (brings up the system menu to allow for game saving and setting adjustment)
     * travel (Brings up the skip travel menu which lets you fast travel)
+* **Super Smash Bros Ultimate**
+    * Strafe *direction*
+    * Final Smash
+    * Plus Ultra (Same as Final Smash)
+    * Jump *direction*
+    * Hop *direction*
+    * Hold Smash *direction*
+    * Adjust *direction*
+    * menu (pauses the game)
