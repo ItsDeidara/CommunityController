@@ -1,6 +1,7 @@
 ## Controls
 
-All of the main switch buttons can be typed out in chat and work as a control.
+All of the main switch buttons can be typed out in chat and work as a control. Please note that you can also press two buttons at the same time by chaining them together with an & symbol. For example if you want to press both A and B at the same time. You would enter A & B in chat
+
 ```
 A / B/ X / Y
 UP / DOWN / LEFT / RIGHT
@@ -171,3 +172,5 @@ wait #does nothing for the specified time
     * Hold Smash *direction*
     * Adjust *direction*
     * menu (pauses the game)
+    * Tilt *drection* (tilt attacks)
+    * Special *direction* 
