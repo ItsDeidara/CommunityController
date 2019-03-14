@@ -1,6 +1,6 @@
 ## Controls
 
-All of the main switch buttons can be typed out in chat and work as a control. Please note that you can also press two buttons at the same time by chaining them together with an & symbol. For example if you want to press both A and B at the same time. You would enter A & B in chat
+All of the main Switch buttons can be typed out in chat and work as a control. Please note that you can also press two buttons at the same time by chaining them together with an & symbol. For example, if you want to press both A and B at the same time, you would enter A & B in chat. Commands are not case-sensitive.
 
 ```
 A / B/ X / Y
@@ -16,29 +16,30 @@ RB (right bumper)
 Look Left / right / up / down
 ```
 
-### Custom commands
+### Custom Commands
 
-Thanks to the work of one of our community members(fazzfadf), we now support the use of custom commands in chat, that should allow you to circumvent any/all situations that the main controls make difficult!
+Thanks to the work of one of our community members(fazzfadf), we now support the use of custom commands in chat. These should allow you to circumvent any/all situations that the main controls make difficult!
 
 
 
 ```
-Syntaxes :
+Syntaxes:
     custom(button)
     custom(button; duration)
     custom([button; button2; ...])
     custom([button; button2; ...]; duration
 
-    Please note that in these custom commands you use a semicolon(;) as a separator and not the usual comma(,)
+    Please note that in these custom commands you use a semicolon(;) as a separator and not the usual comma(,).
 
-Duration :
-decimals between 0 (strictly greater) and 1
-when duration is not specified or invalid, it lasts 0.02 second
+Duration:
+Decimals between 0 (strictly greater) and 1.
+When duration is not specified or is invalid, it lasts 0.02 seconds.
+All time durations are measured in seconds.
 
 Examples:
-  custom(lup; 1.0) #holds up on left stick for 1 second
-  custom([lup; x]) #presses up on left stick and X at the same time
-  custom([lup; x]; 0.5) #holds up on left stick and X for half a second
+  custom(lup; 1.0) #holds up on left stick for 1 second.
+  custom([lup; x]) #presses up on left stick and X at the same time.
+  custom([lup; x]; 0.5) #holds up on left stick and X for half a second.
 
 Available Buttons:
 A, B, X, Y
@@ -61,7 +62,7 @@ rup, rdown, rleft, rright #right stick movement
 
 dup, ddown, dleft, dright, #dpad
 
-wait #does nothing for the specified time
+wait #does nothing for the specified time, measured in seconds
 
 ```
 
@@ -72,10 +73,10 @@ wait #does nothing for the specified time
     * Ground Pound
     * Crouch
     * Backflip
-    * Long jump
+    * Long Jump
     * Swim
     * Dive
-    * Flick up
+    * Flick Up
 * **Kirby Star Allies**
     * Attack
     * BFF
@@ -93,10 +94,10 @@ wait #does nothing for the specified time
     * Wait
     * Rear
     * Ready
-* **The legend of Zelda: Breath of the wild**
-    * Onward (Allows Link to walk forever until you tell him to stop)
-        * Stop  (Stops link from walking)
-        * Still (stops Link from walking)
+* **The Legend of Zelda: Breath of the Wild**
+    * Onward (Allows Link to walk forever until told to stop)
+        * Stop  (Stops Link from walking)
+        * Still (Stops Link from walking)
     * Run (Makes Link run)
     * Hop
         * Hop left
@@ -109,22 +110,22 @@ wait #does nothing for the specified time
         * Bash (quick attack for when Link is catching his breath)
     * Climb
     * Focus
-    * Sheikah slate
-    * Previous rune
-    * Last rune
-    * Previous shield
-    * Last shield
-    * Previous arrow
-    * Last arrow
-    * Previous weapon
-    * Last weapon
-    * Next rune
-    * Next shield
-    * Next arrow
-    * Next weapon
-    * Shoot arrow
-    * Draw arrow
-    * Use rune
+    * Sheikah Slate
+    * Previous Rune
+    * Last Rune
+    * Previous Shield
+    * Last Shield
+    * Previous Arrow
+    * Last Arrow
+    * Previous Weapon
+    * Last Weapon
+    * Next Rune
+    * Next Shield
+    * Next Arrow
+    * Next Weapon
+    * Shoot Arrow
+    * Draw Arrow
+    * Use Rune
     * Shield
     * Block
     * Crouch
@@ -138,31 +139,31 @@ wait #does nothing for the specified time
     * Pluck
     * Combine
     * Dismount
-    * Roll attack
+    * Roll Attack
     * Attack
     * Corkscrew
     * Swim
-    * Keep Hold ZL (holds ZL forever)
-    * Release ZL   (undos aforementioned hold ZL command)
+    * Keep Hold ZL (Holds ZL forever)
+    * Release ZL   (Undos aforementioned hold ZL command)
 * **Splatoon 2**
-    * Keep Hold ZL (holds ZL forever)
-    * Release ZL   (undos aforementioned hold ZL command)
-* **A Link to the past**
-    * Walk Direction (Makes link walk in the specified direction until told to stop)
-    * Look Direction (Makes link turn without moving)
-    * Stand Still (makes link stop walking)
-    * Stop walking (makes link stop walking)
-    * Stop (makes link stop walking)
-    * Still (makes link stop walking)
+    * Keep Hold ZL (Holds ZL forever)
+    * Release ZL   (Undos aforementioned hold ZL command)
+* **A Link to the Past**
+    * Walk Direction (Makes Link walk in the specified direction until told to stop)
+    * Look Direction (Makes Link turn without moving)
+    * Stand Still (Makes Link stop walking)
+    * Stop Walking (Makes Link stop walking)
+    * Stop (Makes Link stop walking)
+    * Still (Makes Link stop walking)
     * Spin Attack
 * **Xenoblade Chronicles 2**
-    * Toggle map (toggles teh minimap zoom)
-    * Zoom map (same as above)
-    * target (locks onto the enemy)
-    * engage (locks onto the enemy and also initiates combat)
-    * menu (pauses the game)
-    * system (brings up the system menu to allow for game saving and setting adjustment)
-    * travel (Brings up the skip travel menu which lets you fast travel)
+    * Toggle Map (Toggles the minimap zoom)
+    * Zoom Map (Same as above)
+    * Target (Locks onto the enemy)
+    * Engage (Locks onto the enemy and also initiates combat)
+    * Menu (Pauses the game)
+    * System (Brings up the system menu to allow for game saving and setting adjustment)
+    * Travel (Brings up the skip travel menu which lets you fast travel)
 * **Super Smash Bros Ultimate**
     * Strafe *direction*
     * Final Smash
@@ -171,6 +172,6 @@ wait #does nothing for the specified time
     * Hop *direction*
     * Hold Smash *direction*
     * Adjust *direction*
-    * menu (pauses the game)
-    * Tilt *drection* (tilt attacks)
+    * Menu (Pauses the game)
+    * Tilt *direction* (Tilt Attacks)
     * Special *direction* 
