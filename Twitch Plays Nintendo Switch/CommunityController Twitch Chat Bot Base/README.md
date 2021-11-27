@@ -15,6 +15,6 @@ First, install the requisite Python libraries through PIP:
     pip3 install twitchio
     pip3 install python-dotenv
 
-Then, copy `.env.example` to `.env`. Edit `.env` and fill the fields as required (`OAUTH_TOKEN` is your Twitch OAuth token, `CHANNEL_NAME` is your Twitch channel name).
+Then, copy `.env.example` to `.env`. Edit `.env` and fill the fields as required (`OAUTH_TOKEN` is your Twitch OAuth token, `CHANNEL_NAME` is your Twitch channel name, `DEBUG` controls debug output and takes a value `True` or `False`).
 
 Lastly, you should be able to start the bot by simply running `python3 main.py`. 
