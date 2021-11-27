@@ -1,11 +1,7 @@
 from twitchio.ext import commands
-
 import socket
 import time
 from dotenv import dotenv_values
-from twitchio.ext.commands import errors
-from twitchio.ext.commands.errors import CommandNotFound
-
 
 class Bot(commands.Bot):
     config = dotenv_values(".env")
