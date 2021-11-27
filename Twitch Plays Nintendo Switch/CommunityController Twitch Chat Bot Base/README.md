@@ -18,3 +18,9 @@ First, install the requisite Python libraries through PIP:
 Then, copy `.env.example` to `.env`. Edit `.env` and fill the fields as required (`OAUTH_TOKEN` is your Twitch OAuth token, `CHANNEL_NAME` is your Twitch channel name, `DEBUG` controls debug output and takes a value `True` or `False`).
 
 Lastly, you should be able to start the bot by simply running `python3 main.py`. 
+
+## Commands
+
+See `main.py` for command examples. Examples:
+- To press `A`, send the message `!A`
+- To press `A` then `B`, send the message `!A!B`
