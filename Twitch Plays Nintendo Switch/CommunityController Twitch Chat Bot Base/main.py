@@ -1,12 +1,23 @@
 from twitchio.ext import commands
 import socket
 import time
+from dotenv import dotenv_values
 
 class Bot(commands.Bot):
 
     def __init__(self):
         # Initialise our Bot with our access token, prefix and a list of channels to join on boot...
-        super().__init__(token='token', prefix="!", initial_channels=['channelNAME'])
+        config = dotenv_values(".env")
+        # Make sure token is non-empty
+        if 'OAUTH_TOKEN' not in config.keys():
+            raise ValueError('OAUTH_TOKEN is not set')
+        if 'CHANNEL_NAME' not in config.keys():
+            raise ValueError('CHANNEL_NAME is not set')
+
+        token = config.get("OAUTH_TOKEN")
+        channel = config.get("CHANNEL_NAME")
+
+        super().__init__(token, prefix="!", initial_channels=[channel])
 
     async def sendCommand(self, content):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
