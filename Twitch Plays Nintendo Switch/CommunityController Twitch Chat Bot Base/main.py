@@ -10,9 +10,11 @@ class Bot(commands.Bot):
         # Initialise our Bot with our access token, prefix and a list of channels to join on boot...
         # Make sure token is non-empty
         if 'OAUTH_TOKEN' not in self.config.keys():
-            raise ValueError('OAUTH_TOKEN is not set')
+            raise ValueError('OAUTH_TOKEN is not set. Please set this to your Twitch OAuth token.')
         if 'CHANNEL_NAME' not in self.config.keys():
-            raise ValueError('CHANNEL_NAME is not set')
+            raise ValueError('CHANNEL_NAME is not set. Please set this to your Twitch channel name.')
+        if 'SWITCH_HOST' not in self.config.keys():
+            raise ValueError('SWITCH_HOST is not set. Please set this to your Nintendo Switch\'s IP address.') 
 
         token = self.config.get("OAUTH_TOKEN")
         channel = self.config.get("CHANNEL_NAME")
@@ -21,7 +23,7 @@ class Bot(commands.Bot):
 
     async def sendCommand(self, content):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect(("localhost", 6000))
+        s.connect((self.config.get("SWITCH_HOST"), 6000))
         print('Twitch pressed a button!', content)
 
         content += '\r\n'  # important for the parser on the switch side
@@ -258,14 +260,15 @@ class Bot(commands.Bot):
 
         if len(message_parts) > 2: # If there are more than 2 parts, we have a command chain
             for part in message_parts:
-                if len(part) > 0:
-                    if part in self.commands:
-                        await self.run_command(part, message_context)
-                        time.sleep(1)
-        else: # If there are only 2 parts, we have a single command ({before}!{after} where {after} 
-            # is the command. {before} is always empty because we enforce a first character of !)
-            if message_parts[1] in self.commands:
-                await self.run_command(message_parts[1], message_context)
+                if len(part) > 0 and part in self.commands:
+                    await self.run_command(part, message_context)
+                    time.sleep(1)
+            return
+
+        # If there are only 2 parts, we have a single command ({before}!{after} where {after} 
+        # is the command. {before} is always empty because we enforce a first character of !)
+        if len(message_parts) == 2 and message_parts[1] in self.commands:
+            await self.run_command(message_parts[1], message_context)
         
     async def event_command_error(self, context: commands.Context, error):
         # Handle command errors
