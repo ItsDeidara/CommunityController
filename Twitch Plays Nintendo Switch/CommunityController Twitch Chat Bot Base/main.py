@@ -23,7 +23,7 @@ class Bot(commands.Bot):
 
     async def sendCommand(self, content):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((self.config.get("SWITCH_HOST", 6000))
+        s.connect((self.config.get("SWITCH_HOST"), 6000))
         print('Twitch pressed a button!', content)
 
         content += '\r\n'  # important for the parser on the switch side
